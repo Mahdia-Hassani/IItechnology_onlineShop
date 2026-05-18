@@ -1,6 +1,6 @@
 # II Technology - Mini E-Commerce Website
 
-A modern, responsive mini e-commerce website for **II Technology**, a local tech accessories store based in Kabul, Afghanistan. Built as a student project using vanilla HTML, CSS, Bootstrap 5 and JavaScript — no frameworks, no backend.
+A modern, responsive mini e-commerce website for **II Technology**, a local tech accessories store based in Kabul, Afghanistan. Built as a student project using vanilla HTML, CSS, Bootstrap 5 and JavaScript.
 
 ## Features
 
@@ -9,7 +9,6 @@ A modern, responsive mini e-commerce website for **II Technology**, a local tech
 - Featured products rendered dynamically from a JavaScript array
 - Real-time product search
 - Category filter pills
-- Shopping cart (add, remove, change quantity, live total)
 - Cart counter in navbar
 - Checkout page with real-time form validation
 - Contact page with form, embedded map and FAQ accordion
@@ -76,20 +75,3 @@ Open `js/products.js` and edit the `products` array. Each product has:
 ```
 
 To add a new product, copy a block, change the `id` and the fields, drop a matching image in the `images/` folder.
-
-## Deploy to GitHub Pages
-
-1. Push the project to a new GitHub repository.
-2. Go to **Settings → Pages**.
-3. Under **Source**, select the `main` branch and `/ (root)` folder.
-4. Click **Save**. After a minute, your site will be live at:
-   `https://<your-username>.github.io/<repo-name>/`
-
-## Notes
-
-- The cart is in-memory only and resets when the page is reloaded — this matches the project requirements.
-- All product images are stored as normal files inside `/images` so they can be easily replaced with real photos later.
-
----
-
-Made with ☕ in Kabul.
