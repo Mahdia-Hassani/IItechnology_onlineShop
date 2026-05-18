@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact - II Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="pageLoader"><div class="spinner"></div></div>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">II <span>Technology</span></a>
+        <button
+          class="navbar-toggler text-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMain"
+        >
+          <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                <i class="bi bi-cart3"></i>
+                Cart
+                <span class="cart-badge cart-count">0</span>
+              </a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <button
+                class="btn theme-toggle"
+                id="themeToggle"
+                title="Toggle theme"
+              >
+                <i class="bi bi-sun-fill"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section style="padding-top: 130px">
+      <div class="container">
+        <h1 class="section-title">Get in Touch</h1>
+        <p class="section-sub">
+          We're here to help with any question about our products or your order.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-5">
+            <div class="contact-info">
+              <h6 style="color: var(--neon)">📍 Address</h6>
+              <p class="mb-0">Shahr-e-Naw, Kabul, Afghanistan</p>
+            </div>
+            <div class="contact-info">
+              <h6 style="color: var(--neon)">📞 Phone</h6>
+              <p class="mb-0">+93 700 000 000</p>
+            </div>
+            <div class="contact-info">
+              <h6 style="color: var(--neon)">✉️ Email</h6>
+              <p class="mb-0">info@iitechnology.af</p>
+            </div>
+            <div class="contact-info">
+              <h6 style="color: var(--neon)">Follow Us</h6>
+              <div class="socials">
+                <a href="#">f</a><a href="#">ig</a><a href="#">x</a
+                ><a href="#">▶</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-7">
+            <div class="cart-summary">
+              <h5>Send us a message</h5>
+              <form
+                onsubmit="
+                  event.preventDefault();
+                  showToast('Message sent!');
+                  this.reset();
+                "
+              >
+                <div class="mb-3">
+                  <label class="form-label">Your Name</label
+                  ><input class="form-control" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email</label
+                  ><input class="form-control" type="email" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Subject</label
+                  ><input class="form-control" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Message</label
+                  ><textarea class="form-control" rows="4" required></textarea>
+                </div>
+                <button class="btn btn-glow" type="submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <h3>Find Us</h3>
+          <div
+            style="
+              border-radius: 14px;
+              overflow: hidden;
+              border: 1px solid var(--border);
+              margin-top: 15px;
+            "
+          >
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=69.165%2C34.520%2C69.190%2C34.540&layer=mapnik"
+              style="
+                width: 100%;
+                height: 320px;
+                border: 0;
+                filter: invert(0.9) hue-rotate(180deg);
+              "
+              loading="lazy"
+              title="Store location map"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="mt-5 faq">
+          <h3>Frequently Asked Questions</h3>
+          <div class="accordion mt-3" id="faqAcc">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q1"
+                >
+                  Do you deliver outside Kabul?
+                </button>
+              </h2>
+              <div
+                id="q1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAcc"
+              >
+                <div class="accordion-body">
+                  Yes, we deliver to all major cities in Afghanistan within 2-4
+                  business days.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q2"
+                >
+                  Are your products original?
+                </button>
+              </h2>
+              <div
+                id="q2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAcc"
+              >
+                <div class="accordion-body">
+                  All our products are sourced from authorized distributors and
+                  come sealed in original packaging.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q3"
+                >
+                  Do you offer warranty?
+                </button>
+              </h2>
+              <div
+                id="q3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAcc"
+              >
+                <div class="accordion-body">
+                  Yes, most products come with a 6-12 month warranty depending
+                  on the brand.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#q4"
+                >
+                  What payment methods do you accept?
+                </button>
+              </h2>
+              <div
+                id="q4"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAcc"
+              >
+                <div class="accordion-body">
+                  We accept cash on delivery and major credit/debit cards
+                  through our checkout.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p class="text-center small mb-0">© 2026 II Technology.</p>
+      </div>
+    </footer>
+
+    <button id="backTop">↑</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

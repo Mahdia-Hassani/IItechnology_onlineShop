@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Checkout - II Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          II <span>Technology</span>
+        </a>
+
+        <button
+          class="navbar-toggler text-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMain"
+        >
+          <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="cart.html">
+                <i class="bi bi-cart3"></i>
+                Cart
+                <span class="cart-badge cart-count">0</span>
+              </a>
+            </li>
+
+            <li class="nav-item ms-lg-2">
+              <button
+                class="btn theme-toggle"
+                id="themeToggle"
+                title="Toggle theme"
+              >
+                <i class="bi bi-sun-fill"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- checkout -->
+    <section style="padding-top: 130px">
+      <div class="container">
+        <!-- success -->
+        <div
+          id="successMsg"
+          style="display: none"
+          class="testimonial text-center"
+        >
+          <h2 style="color: var(--neon)">Order placed successfully ✓</h2>
+
+          <p>
+            Thank you for shopping with II Technology. We'll contact you shortly
+            to confirm delivery details.
+          </p>
+
+          <a href="index.html" class="btn btn-glow"> Back to Home </a>
+        </div>
+
+        <!-- checkout form -->
+        <div id="checkoutWrap">
+          <h1 class="section-title">Checkout</h1>
+
+          <p class="section-sub">
+            Please fill in your details to complete the order.
+          </p>
+
+          <form name="checkoutForm" novalidate>
+            <div class="row g-4">
+              <!-- form side -->
+              <div class="col-lg-7">
+                <div class="cart-summary">
+                  <h5 class="mb-3">Shipping Information</h5>
+
+                  <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+
+                    <input class="form-control" name="fullName" />
+
+                    <div class="error-msg" id="err_fullName"></div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Email</label>
+
+                      <input class="form-control" name="email" type="email" />
+
+                      <div class="error-msg" id="err_email"></div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label class="form-label">Phone</label>
+
+                      <input class="form-control" name="phone" />
+
+                      <div class="error-msg" id="err_phone"></div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3 mt-3">
+                    <label class="form-label">Address</label>
+
+                    <input class="form-control" name="address" />
+
+                    <div class="error-msg" id="err_address"></div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">City</label>
+
+                    <input class="form-control" name="city" />
+
+                    <div class="error-msg" id="err_city"></div>
+                  </div>
+
+                  <!-- payment -->
+                  <h5 class="mb-3 mt-4">Payment</h5>
+
+                  <div class="mb-3">
+                    <label class="form-label"> Payment Method </label>
+
+                    <select class="form-select" name="payment">
+                      <option value="">Select method...</option>
+
+                      <option>Credit / Debit Card</option>
+
+                      <option>Cash on Delivery</option>
+                    </select>
+
+                    <div class="error-msg" id="err_payment"></div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label"> Card Number </label>
+
+                    <input
+                      class="form-control"
+                      name="card"
+                      placeholder="1234 5678 9012 3456"
+                    />
+
+                    <div class="error-msg" id="err_card"></div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label"> Expiry (MM/YY) </label>
+
+                      <input
+                        class="form-control"
+                        name="expiry"
+                        placeholder="08/27"
+                      />
+
+                      <div class="error-msg" id="err_expiry"></div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label class="form-label">CVV</label>
+
+                      <input
+                        class="form-control"
+                        name="cvv"
+                        placeholder="123"
+                      />
+
+                      <div class="error-msg" id="err_cvv"></div>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-glow w-100 mt-4">
+                    Place Order
+                  </button>
+                </div>
+              </div>
+
+              <!-- summary side -->
+              <div class="col-lg-5">
+                <div class="cart-summary">
+                  <h5>Order Summary</h5>
+
+                  <!-- products -->
+                  <div id="checkoutItems" class="mb-3"></div>
+
+                  <hr style="border-color: var(--border)" />
+
+                  <div class="d-flex justify-content-between">
+                    <span>Subtotal</span>
+
+                    <span id="checkoutSub">$0.00</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between mt-2">
+                    <span>Shipping</span>
+
+                    <span id="checkoutShip">$0.00</span>
+                  </div>
+
+                  <hr style="border-color: var(--border)" />
+
+                  <div class="d-flex justify-content-between fw-bold fs-5">
+                    <span>Total</span>
+
+                    <span id="checkoutTotal">$0.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <p class="text-center small mb-0">© 2026 II Technology.</p>
+      </div>
+    </footer>
+
+    <!-- back top -->
+    <button id="backTop">↑</button>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

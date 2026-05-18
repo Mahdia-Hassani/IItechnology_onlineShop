@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cart - II Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">II <span>Technology</span></a>
+        <button
+          class="navbar-toggler text-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMain"
+        >
+          <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                <i class="bi bi-cart3"></i>
+                Cart
+                <span class="cart-badge cart-count">0</span>
+              </a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <button
+                class="btn theme-toggle"
+                id="themeToggle"
+                title="Toggle theme"
+              >
+                <i class="bi bi-sun-fill"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section style="padding-top: 130px">
+      <div class="container">
+        <h1 class="section-title">Your Cart</h1>
+        <p class="section-sub">Review your items before checkout.</p>
+
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div id="cartList"></div>
+            <div
+              id="emptyMsg"
+              style="display: none"
+              class="testimonial text-center"
+            >
+              <p>Your cart is empty.</p>
+              <a href="index.html" class="btn btn-glow">Start shopping</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="cart-summary">
+              <h5>Order Summary</h5>
+              <hr style="border-color: var(--border)" />
+              <div class="d-flex justify-content-between">
+                <span>Subtotal</span><span id="cartSub">$0.00</span>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span>Shipping</span><span id="cartShip">$0.00</span>
+              </div>
+              <hr style="border-color: var(--border)" />
+              <div class="d-flex justify-content-between fw-bold fs-5">
+                <span>Total</span><span id="cartTotal">$0.00</span>
+              </div>
+              <a href="checkout.html" class="btn btn-glow w-100 mt-3"
+                >Proceed to Checkout</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p class="text-center small mb-0">© 2026 II Technology.</p>
+      </div>
+    </footer>
+
+    <button id="backTop">↑</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>
